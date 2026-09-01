@@ -119,6 +119,14 @@ print(string,"-", check(string))
 
 
 #--------------------------------------------
+"""
+Project Description
+
+This project showcases the implementation of a stack data structure along 
+with its main operations like push, pop, top, is_empty and size."""
+
+
+
 '''
 Class Notes:  Stacks
 
@@ -142,3 +150,64 @@ top(): Returns the item at the top of the stack without removing it.
 is_empty(): Returns True if the stack is empty, False otherwise.
 size(): Returns the number of items in the stack.
 '''
+"""
+Additional Practice
+
+Practice 1: Reverse a String using a Stack
+
+Task: Create a program that uses a Stack to reverse a user-input string.
+
+Input: "PYTHON"
+Goal: Output: "NOHTYP" (LIFO property naturally reverses the order).
+Logic(Give if needed):
+Create an empty stack (list).
+Loop through the string and Push each character onto the stack.
+Loop while the stack is not empty: Pop the character and add it to a new result string.
+ 
+
+Practice 2: The Undo Feature (Simulation)
+
+Task: Simulate a text editor's "Undo" button.
+
+Setup: Create an empty stack history = [] and a string text = "".
+Goal: Type "Hello", Type "World" -> Text is "Hello World". Undo -> Text becomes "Hello".
+Logic(Give if needed):
+"Type": Append a word to text and Push the previous state of text onto the history stack.
+"Undo": Pop the last state from history and restore text to that state.
+Practice 3: Check for Palindrome using Stack
+
+Task: Use a stack to check if a word is a palindrome (reads the same forwards and backwards).
+
+Input: "racecar"
+Goal: "level" -> True, "hello" -> False.
+Logic (Give if needed):
+Push all characters of the word onto a stack.
+Iterate through the original word again.
+For each character, pop a character from the stack and compare them.
+If all characters match, it is a palindrome.
+ 
+
+Practice 4: Decimal to Binary Converter
+
+Task: Convert a decimal number to binary using a stack.
+
+Input: 10
+Goal: Input 10 -> Output 1010.
+Logic (Give if needed):
+While number > 0:
+Calculate remainder (num % 2).
+Push remainder onto the stack.
+Divide number by 2 (num // 2).
+Pop all elements to form the binary string.
+ 
+
+Practice 5: Min-Stack (Optimization)
+
+Task: Create a Stack class that can return the minimum element instantly.
+
+Goal: Push [5, 2, 8, 1]. Get Min -> 1. Pop. Get Min -> 2.
+Logic (Give if needed):
+Maintain two lists: main_stack and min_stack.
+Push: Add value to main_stack. If value <= min_stack.top() (or if empty), add to min_stack too.
+Pop: Remove from main_stack. If the value was the top of min_stack, remove it from there too.
+Get Min: Just return the top of min_stack (O(1) time)."""
