@@ -30,3 +30,16 @@ for i in range(len(contacts)):
 
 if not found:
     print("Contact not found")
+#=====================================
+
+print('\n\nBinary Search : ')
+names = list(map(str, input("please create a list of names ").split()))
+key = input("which name are you looking for? ")
+
+if key not in names:
+    print("ERROR: NAME NOT FOUND")
+else:
+    for i in range(len(names)):
+        if names[i] == key:
+            print("Key exists at index: " + str(i))
+            break
